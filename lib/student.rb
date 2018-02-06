@@ -26,4 +26,8 @@ class Student
 
     DB[:conn].execute(sql)
   end
+
+  def save
+    sql = DB[:conn].execute("INSERT INTO students (name, grade) VALUES (?, ?)", @name, @grade)
+  end
 end
