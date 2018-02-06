@@ -7,8 +7,14 @@ class Student
     @name, @grade, @id = name, grade, id
   end
 
-  def self.CREATE_TABLE
-
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE students (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        grade TEXT
+      );
+    SQL
   end
-
+    
 end
